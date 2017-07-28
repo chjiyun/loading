@@ -220,6 +220,80 @@
     -webkit-animation: spinner1 1500ms infinite linear;
     animation: spinner1 1500ms infinite linear;
 }
+.spinner7{
+    font-size: 12px;
+    position: relative;
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 1em #FFF;
+    &:before{
+        content: '';
+        position: absolute;
+        width: 5.2em;
+        height: 10.2em;
+        background: #404040;
+        border-radius: 10.2em 0 0 10.2em;
+        top: -0.1em;
+        left: -0.1em;
+        -webkit-transform-origin: 5.2em 5.1em;
+        transform-origin: 5.2em 5.1em;
+        -webkit-animation: spinner1 2s infinite ease 1.5s;
+        animation: spinner1 2s infinite ease 1.5s;
+    }
+    &:after{
+        content: '';
+        position: absolute;
+        width: 5.2em;
+        height: 10.2em;
+        background: #404040;
+        border-radius: 0 10.2em 10.2em 0;
+        top: -0.1em;
+        left: 5.1em;
+        -webkit-transform-origin: 0px 5.1em;
+        transform-origin: 0px 5.1em;
+        -webkit-animation: spinner1 2s infinite ease;
+        animation: spinner1 2s infinite ease;
+    }
+}
+.rectangle{
+    position: relative;
+    font-size: 12px;
+    width: 1em;
+    height: 4em;
+    background: #FFF;
+    transform-origin: center;
+    -webkit-animation: rectangle 1s infinite ease-in-out;
+    animation: rectangle 1s infinite ease-in-out;
+    animation-delay: -0.16s;
+    -webkit-animation-delay: -0.16s;
+    &:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -1.5em;
+        width: 1em;
+        height: 4em;
+        background: #FFF;
+        transform-origin: center;
+        -webkit-animation: rectangle 1s infinite ease-in-out;
+        animation: rectangle 1s infinite ease-in-out;
+        -webkit-animation-delay: -0.32s;
+        animation-delay: -0.32s;
+    }
+    &:after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 1.5em;
+        width: 1em;
+        height: 4em;
+        background: #FFF;
+        transform-origin: center;
+        -webkit-animation: rectangle 1s infinite ease-in-out;
+        animation: rectangle 1s infinite ease-in-out;
+    }
+}
 
 @keyframes bagua{
     0% {
@@ -292,6 +366,31 @@
         box-shadow: white 0 0 15px 0, #fd8 12px 12px 0 4px, #fd8 -12px 12px 0 4px, #fd8 -12px -12px 0 4px, #fd8 12px -12px 0 4px;
     }
 }
+@-webkit-keyframes rectangle {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0 #FFF;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em #ffffff;
+    height: 5em;
+  }
+}
+@keyframes rectangle {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0 #FFF;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em #ffffff;
+    height: 5em;
+  }
+}
+
 /* 手机端布局控制 */
 @media all and (max-width: 720px){
     .header{
